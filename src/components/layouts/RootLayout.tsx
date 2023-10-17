@@ -1,15 +1,10 @@
 import { ReactElement, ReactNode } from "react";
-import { Footer, Navbar } from "../shared";
-import useDarkMode from "@/hooks/theme";
+import { Footer, Navbar, Sidebar } from "../shared";
 
 const RootLayout = ({ children }: { children: ReactNode | ReactElement }) => {
-  const [isDarkMode] = useDarkMode();
-
   return (
-    <div
-      className={`max-w-[1444px] mx-auto`}
-      style={{ color: isDarkMode ? "var(--text-color)" : "var(--text-color)" }}
-    >
+    <div className="max-w-[1444px] mx-auto md:mx-2">
+      <Sidebar />
       <Navbar />
       <div>{children}</div>
       <Footer />

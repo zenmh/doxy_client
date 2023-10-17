@@ -7,13 +7,8 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    darkMode: "class",
-    extend: {
-      backgroundColor: { dark: "var(--bg-dark)" },
-      textColor: { dark: "var(--text-dark)" },
-    },
+    extend: {},
   },
-  variants: { extend: { backgroundColor: ["dark"], textColor: ["dark"] } },
   plugins: [],
 };
 export default config;

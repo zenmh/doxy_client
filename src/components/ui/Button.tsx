@@ -28,7 +28,7 @@ const Button: FC<ButtonProsp> = ({
       font-bold py-2 px-3 rounded-md shadow-md transition duration-300 transform border-none text-black dark:text-white
       ${size === "xs" && "scale-50"}
       ${size === "sm" && "scale-75"}
-      ${size === "md" && "scale-95"}
+      ${size === "md" && "scale-100"}
       ${size === "lg" && "scale-105"}
       ${!disabled && variant === "primary" && "bg-cyan-500 hover:bg-cyan-600"}
       ${!disabled && variant === "secondary" && "bg-teal-500 hover:bg-teal-600"}
