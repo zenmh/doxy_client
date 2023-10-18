@@ -30,7 +30,7 @@ const Button: FC<ButtonProsp> = ({
       ${size === "sm" && "scale-75"}
       ${size === "md" && "scale-100"}
       ${size === "lg" && "scale-105"}
-      ${!disabled && variant === "primary" && "bg-cyan-500 hover:bg-cyan-600"}
+      ${!disabled && variant === "primary" && "bg-cyan-600 hover:bg-cyan-700"}
       ${!disabled && variant === "secondary" && "bg-teal-500 hover:bg-teal-600"}
       ${!disabled && variant === "danger" && "bg-rose-500 hover:bg-rose-600"} ${
         isLoading && "w-20"

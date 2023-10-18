@@ -1,20 +1,34 @@
 import { DoctorCard } from "@/components/doctor";
 import { RootLayout } from "@/components/layouts";
+import { Spinner } from "@/components/ui";
+import type { IDoctor } from "@/interfaces/doctor";
+import { useGetDoctorsQuery } from "@/redux/api/doctorApi";
 import { ReactNode } from "react";
 
 const MedicalSpecialist = () => {
+  const { data: doctors, isLoading: getDoctorsIsLoading } =
+    useGetDoctorsQuery(undefined);
+
+  if (getDoctorsIsLoading) return <Spinner />;
+
   return (
     <div className="ml-2">
       <h2 className="text-2xl font-bold text-left text-neutral-400">
         Medical Specialist
       </h2>
-      <DoctorCard
-        name="Dr. Beautiful Girl"
-        speciality="EYE"
-        practicing_branch="Doxy Center"
-        branch="DHAKA"
-        // profileImage="https://images.theconversation.com/files/304957/original/file-20191203-66986-im7o5.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip"
-      />
+      <div className="flex flex-row flex-wrap gap-6">
+        {doctors.data &&
+          doctors.data.map((doctor: IDoctor) => (
+            <DoctorCard
+              key={doctor?.id}
+              id={doctor?.id}
+              name={doctor?.name}
+              speciality={doctor?.speciality}
+              practicing_branch={doctor?.practicing_branch}
+              branch={doctor?.branch}
+            />
+          ))}
+      </div>
     </div>
   );
 };

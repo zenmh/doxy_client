@@ -2,34 +2,19 @@ import { FC } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { doctor_avatar } from "@/assets/images";
+import type { IBranch, ISpeciality } from "@/interfaces/doctor";
 
 interface DoctorCardProps {
+  id: string;
   name: string;
-  speciality:
-    | "THYROID"
-    | "EYE"
-    | "NEUROLOGY"
-    | "CARDIOLOGY"
-    | "MEDICINE"
-    | "PSYCHIATRY"
-    | "DENTIST"
-    | "ORTHOPEDICS"
-    | "HAEMATOLOGY"
-    | "GYNAECOLOGY";
+  speciality: ISpeciality;
   practicing_branch: string;
-  branch:
-    | "BARISHAL"
-    | "CHATTOGRAM"
-    | "DHAKA"
-    | "KHULNA"
-    | "RAJSHAHI"
-    | "RANGPUR"
-    | "MYMENSINGH"
-    | "SYLHET";
+  branch: IBranch;
   profileImage?: string;
 }
 
 const DoctorCard: FC<DoctorCardProps> = ({
+  id,
   name,
   speciality,
   practicing_branch,
@@ -39,8 +24,8 @@ const DoctorCard: FC<DoctorCardProps> = ({
   const { push } = useRouter();
   return (
     <div
-      onClick={() => push("/")}
-      className="border-2 border-neutral-700 hover:border-teal-700 h-[300px] w-[260px] rounded-lg text-neutral-300 cursor-pointer transition duration-300"
+      onClick={() => push(`/doctors/${id}`)}
+      className="border-2 border-neutral-700 hover:border-teal-700 h-[300px] w-[260px] rounded-lg text-gray-300 cursor-pointer transition duration-300"
     >
       <figure className="flex flex-row justify-center">
         <Image
@@ -54,11 +39,19 @@ const DoctorCard: FC<DoctorCardProps> = ({
       <div className="m-2">
         <h4 className="text-lg font-semibold truncate capitalize">{name}</h4>
         <p>
-          {speciality.slice(0, 1)}
-          <span className="lowercase">{speciality.slice(1)}</span>
+          {
+            // @ts-ignore
+            speciality.slice(0, 1)
+          }
+          <span className="lowercase">
+            {
+              //@ts-ignore
+              speciality.slice(1)
+            }
+          </span>
         </p>
         <p className="truncate">{practicing_branch}</p>
-        <p>
+        <p className="font-semibold">
           Branch: {branch.slice(0, 1)}
           <span className="lowercase">{branch.slice(1)}</span>
         </p>

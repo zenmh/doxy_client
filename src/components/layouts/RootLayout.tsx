@@ -3,7 +3,7 @@ import { Footer, Navbar } from "../shared";
 
 const RootLayout = ({ children }: { children: ReactNode | ReactElement }) => {
   return (
-    <div className="max-w-[1444px] mx-auto md:mx-2">
+    <div className="max-w-[1444px] mx-auto">
       <Navbar />
       <div>{children}</div>
       <Footer />
