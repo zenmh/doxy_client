@@ -15,37 +15,37 @@ const services = [
     image: medical_specialist_icon,
     title: "Medical Specialist",
     desc: "...",
-    path: "/",
+    path: "/medical_specialist",
   },
   {
     image: pharmacy_service_icon,
     title: "Pharmacy Service",
     desc: "...",
-    path: "/",
+    path: "/pharmacy_service",
   },
   {
     image: health_consultaion_icon,
     title: "Health Consultation",
     desc: "...",
-    path: "/",
+    path: "/health_consultation",
   },
   {
     image: medical_checkup_icon,
     title: "Medical Checkup",
     desc: "...",
-    path: "/",
+    path: "/medical_specialist",
   },
   {
     image: abmulance_service_icon,
     title: "Ambulance Service",
     desc: "...",
-    path: "/",
+    path: "/ambulance_service",
   },
   {
     image: health_assurance_icon,
     title: "Health Assurance",
     desc: "...",
-    path: "/",
+    path: "/health_assurance",
   },
 ];
 
