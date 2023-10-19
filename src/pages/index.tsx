@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 import { RootLayout } from "@/components/layouts";
-import { Services } from "@/components/home";
+import { Services, Testimonials } from "@/components/home";
 import {
   abmulance_service_icon,
   health_assurance_icon,
@@ -53,6 +53,7 @@ const Home = () => {
   return (
     <div>
       <Services services={services} />
+      <Testimonials />
     </div>
   );
 };

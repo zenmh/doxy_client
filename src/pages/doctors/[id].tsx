@@ -19,7 +19,7 @@ const DoctorDetails = () => {
       <div className="w-full">
         <Image
           src={
-            doctor.data.profileImage
+            doctor?.data?.profileImage
               ? doctor?.data?.profileImage
               : doctor_avatar
           }
