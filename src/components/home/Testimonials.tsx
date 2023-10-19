@@ -35,8 +35,8 @@ const testimonials: ITestimonial[] = [
 
 const Testimonials: FC<TestimonialsProps> = () => {
   return (
-    <section>
-      <h2 className="text-3xl font-bold text-neutral-400 mb-6 mt-20 text-center">
+    <section className="my-10">
+      <h2 className="text-3xl font-bold text-neutral-400 mb-6 text-center">
         Our Client Says
       </h2>
       <div className="flex flex-row items-center gap-6 justify-center flex-wrap">

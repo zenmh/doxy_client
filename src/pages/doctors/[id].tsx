@@ -5,6 +5,7 @@ import { useGetDoctorQuery } from "@/redux/api/doctorApi";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { ReactNode } from "react";
+import { toast } from "react-toastify";
 
 const DoctorDetails = () => {
   const { push, query } = useRouter();
@@ -67,7 +68,7 @@ const DoctorDetails = () => {
           size="md"
           variant="primary"
           disabled={doctorIsLoading}
-          onClick={() => push("/")}
+          onClick={() => toast.info("Under Implementation ^_^")}
         />
       </div>
     </div>

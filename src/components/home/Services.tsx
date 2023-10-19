@@ -15,7 +15,7 @@ interface ServicesProps {
 
 const Services: FC<ServicesProps> = ({ services }) => {
   return (
-    <section>
+    <section className="mb-10">
       <h2 className="text-3xl font-semibold text-center text-neutral-400 mb-4">
         Our Services
       </h2>
