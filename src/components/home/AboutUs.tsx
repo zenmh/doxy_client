@@ -1,5 +1,5 @@
-import { doctor_animated } from "@/assets/images";
 import Image from "next/image";
+import { doctor_animated } from "@/assets/images";
 
 const AboutUs = () => {
   return (
@@ -15,17 +15,18 @@ const AboutUs = () => {
       <div className="flex flex-row justify-center items-center mt-6">
         <div className="text-right flex flex-col justify-center gap-60">
           <div>
-            <h4 className="text-cyan-400 font-bold">MODERN EQUIPMENT</h4>
+            <h4 className="text-cyan-400 font-bold">OPTIMAL PRICE</h4>
             <p className="text-slate-300">
-              We are not just a regular clinic, <br /> but a medical service
-              provider, <br /> with which you can share any
+              In order to obtain operational and <br /> accurate results, our
+              Clinic s with <br /> which entered into contractual
             </p>
           </div>
           <div>
-            <h4 className="text-cyan-400 font-bold">MODERN EQUIPMENT</h4>
+            <h4 className="text-cyan-400 font-bold">QUALIFIED STUFF</h4>
             <p className="text-slate-300">
-              We are not just a regular clinic, <br /> but a medical service
-              provider, <br /> with which you can share any
+              We are not just a regular clinic,
+              <br /> but a medical service provider, <br /> with which you can
+              share any
             </p>
           </div>
         </div>
@@ -35,14 +36,15 @@ const AboutUs = () => {
             <h4 className="text-cyan-400 font-bold">MODERN EQUIPMENT</h4>
             <p className="text-slate-300">
               We are not just a regular clinic, <br /> but a medical service
-              provider, <br /> with which you can share any
+              provider, <br /> with modern cutting edge technology
             </p>
           </div>
           <div>
-            <h4 className="text-cyan-400 font-bold">MODERN EQUIPMENT</h4>
+            <h4 className="text-cyan-400 font-bold">PROFESSIONAL DOCTORS</h4>
             <p className="text-slate-300">
-              We are not just a regular clinic, <br /> but a medical service
-              provider, <br /> with which you can share any
+              In order to obtain operational and <br /> accurate results, our
+              Clinic s with <br />
+              which entered into contractual
             </p>
           </div>
         </div>

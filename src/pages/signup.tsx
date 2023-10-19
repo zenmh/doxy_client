@@ -59,7 +59,7 @@ const SignUp = () => {
 
   return (
     <section className="flex flex-row items-center justify-center min-h-screen">
-      <div className="grid grid-cols-2 ">
+      <div className="grid grid-cols-2 gap-3">
         <div className="">
           <Image
             src={sign_up_image}
